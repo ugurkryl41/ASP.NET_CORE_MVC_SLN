@@ -1,62 +1,61 @@
 # ASP.NET CORE MVC
 
-## Proje Açıklaması
+## Project Description
+### This project is a web application developed with ASP.NET Core MVC and built using various modern software technologies and architectures. Below, the main components and structures used in the project are explained in detail.
 
-### Bu proje, ASP.NET Core MVC ile geliştirilmiş bir web uygulamasıdır ve çeşitli modern yazılım teknolojileri ve mimarileri kullanılarak oluşturulmuştur. Aşağıda, projede kullanılan ana bileşenler ve yapılar detaylı olarak açıklanmaktadır.
+## Technologies Used
+* ASP.NET Core MVC: This project is built on ASP.NET Core using the Model-View-Controller (MVC) pattern.
+* Entity Framework Core: Entity Framework Core is used for database operations.
+* AutoMapper: AutoMapper is used for object mapping and data transformations.
+* Bootstrap: The Bootstrap library is used to build the user interface.
 
-## Kullanılan Teknolojiler
 
-  * ASP.NET Core MVC: Bu proje, Model-View-Controller (MVC) desenini kullanarak ASP.NET Core üzerinde inşa edilmiştir.
-  * Entity Framework Core: Veritabanı işlemleri için Entity Framework Core kullanılmıştır.
-  * AutoMapper: Nesne yönlendirmesi ve veri dönüştürmeleri için AutoMapper kullanılmıştır.
-  * Bootstrap: Kullanıcı arayüzünü oluşturmak için Bootstrap kütüphanesi kullanılmıştır.
+## Architectures and Structures
+* Layered Architecture: The project is structured according to the principles of layered architecture.
+* Presentation Layer: Contains the user interface and MVC controllers.
+* Business Logic Layer: Contains the business rules and application logic.
+* Data Access Layer: Contains the data access layer, implemented using Entity Framework Core.
 
-## Mimariler ve Yapılar
-* Katmanlı Mimari: Proje, katmanlı mimari prensiplerine göre yapılandırılmıştır.
-    * Presentation Layer: Kullanıcı arayüzünü ve MVC kontrolörlerini içerir.
-    * Business Logic Layer: İş kurallarını ve uygulama mantığını içerir.
-    * Data Access Layer: Veritabanı erişim katmanını içerir ve Entity Framework Core kullanılarak gerçekleştirilmiştir.
+## Features and Structures
+* Dependency Injection: Dependency injection (DI) is used in the project.
+* Tag Helpers: ASP.NET Core MVC Tag Helpers are used to extend HTML elements and Razor components.
+* Middleware: Custom middleware components are used to process HTTP requests and responses.
+* Automatic Mapping: AutoMapper is used to perform transformations between data models.
 
-## Özellikler ve Yapılar
-* Dependency Injection: Projede bağımlılık enjeksiyonu (DI) kullanılmıştır.
-* Tag Helpers: ASP.NET Core MVC Tag Helpers kullanılarak HTML elemanları ve Razor bileşenleri genişletilmiştir.
-* Middleware: Özel middleware bileşenleri ile HTTP istekleri ve yanıtları işlenmiştir.
-* Otomatik Mapping: AutoMapper kullanılarak veri modelleri arasında dönüşümler yapılmıştır.
+## Database Migrations 
+* Code-First Migrations: Entity Framework Core is used to manage the database schema with a Code-First approach.
 
-## Veritabanı Migrations  
-* Code-First Migrations: Entity Framework Core kullanılarak Code-First yaklaşımı ile veritabanı şeması oluşturulmuş ve yönetilmiştir.
+## User Management
+* Session Management: User session management and authentication processes are implemented.
+* Role-Based Authorization: User roles and authorization processes are managed.
 
-## Kullanıcı Yönetimi
-* Session Management: Kullanıcı oturum yönetimi ve kimlik doğrulama işlemleri gerçekleştirilmiştir.
-* Role-Based Authorization: Kullanıcı rolleri ve yetkilendirme işlemleri yönetilmiştir.
+## User Interface
+* Responsive Design: A responsive and user-friendly interface design has been implemented using Bootstrap.
 
-## Kullanıcı Arayüzü
-* Responsive Design: Bootstrap kullanılarak duyarlı ve kullanıcı dostu bir arayüz tasarımı gerçekleştirilmiştir.
+## Design Patterns 
+* Repository Pattern: The Repository pattern is used in the data access layer to abstract data access operations. This centralizes database operations.
+* Unit of Work: Ensures that operations across multiple units are managed consistently as a whole. This pattern is especially used in database operations.
+* Dependency Injection (DI): The Dependency Injection pattern is used to manage dependencies, making components more testable and manageable.
+* Factory Pattern: Factory patterns are used to abstract the object creation process. This makes object creation more flexible and modular.
 
-## Design Patterns (Tasarım Kalıpları)
-* Repository Pattern: Veri erişim katmanında Repository deseni kullanılarak veri erişim işlemleri soyutlanmıştır. Bu, veritabanı işlemlerinin merkezi bir yerden yönetilmesini sağlar.
-* Unit of Work: Birimler arası işlemlerin tutarlı ve bir bütün olarak yönetilmesini sağlar. Bu desen, özellikle veri tabanı işlemlerinde kullanılmıştır.
-* Dependency Injection (DI): Bağımlılıkların yönetimi için DI deseni kullanılmıştır. Bu, uygulama bileşenlerinin daha kolay test edilmesini ve yönetilmesini sağlar.
-* Factory Pattern: Nesne oluşturma sürecini soyutlamak için fabrika desenleri kullanılmıştır. Bu, nesne oluşturma işlemlerinin daha esnek ve modüler olmasını sağlar.
-
-# Yazılım Metodolojileri ve Tasarım Prensipleri
-## SOLID Prensipleri
-* Single Responsibility Principle (SRP): Her sınıfın sadece bir sorumluluğu olmalıdır. Örneğin, ServiceExtension.cs dosyası sadece servislerin DI konteynerine eklenmesi işlemini yönetir.
-* Open/Closed Principle (OCP): Sınıflar genişlemeye açık, ancak değişime kapalı olmalıdır. Projede, yeni özellikler eklerken mevcut kodu değiştirmeden genişletmek için arayüzler ve soyut sınıflar kullanılmıştır.
-* Liskov Substitution Principle (LSP): Türeyen sınıflar, türedikleri sınıfın yerine kullanılabilmelidir. Bu prensip, özellikle veri modelleri ve AutoMapper ile yapılan dönüşümlerde göz önünde bulundurulmuştur.
-* Interface Segregation Principle (ISP): Kullanıcıları gereksiz metodlarla zorlamadan, spesifik arayüzler oluşturulmalıdır. Projede, her bir işlevsellik için spesifik arayüzler tanımlanmıştır.
-* Dependency Inversion Principle (DIP): Yüksek seviyeli modüller düşük seviyeli modüllere bağımlı olmamalıdır. Abstraksiyonlar kullanılarak bağımlılıklar yönetilmiştir.
+# Software Methodologies and Design Principles
+## SOLID Principles
+* Single Responsibility Principle (SRP): Each class should have only one responsibility. For example, the ServiceExtension.cs file is responsible solely for adding services to the DI container.
+* Open/Closed Principle (OCP): Classes should be open for extension but closed for modification. In the project, interfaces and abstract classes are used to extend functionality without changing existing code.
+* Liskov Substitution Principle (LSP): Derived classes should be able to replace their base classes. This principle is particularly considered when working with data models and transformations with AutoMapper.
+* Interface Segregation Principle (ISP): Specific interfaces are defined for each functionality, ensuring that users are not forced to implement unnecessary methods.
+* Dependency Inversion Principle (DIP): High-level modules should not depend on low-level modules. Dependencies are managed through abstractions.
 
 ## Clean Code
-* Anlaşılabilirlik: Kodun okunabilir ve anlaşılabilir olması sağlanmıştır. Anlamlı değişken isimleri ve açıkça tanımlanmış metodlar kullanılmıştır.
-* Yeniden Kullanılabilirlik: Kod, tekrar kullanılabilir bileşenler halinde yazılmıştır. Bu, kodun sürdürülebilirliğini ve genişletilebilirliğini artırır.
-* Test Edilebilirlik: Bağımlılık enjeksiyonu ve soyutlamalar kullanılarak kodun birim testleri kolaylaştırılmıştır.
+* Readability: The code is written to be easily readable and understandable. Meaningful variable names and clearly defined methods are used.
+* Reusability: The code is written in reusable components, which enhances the maintainability and scalability of the project.
+* Testability: Dependency injection and abstractions are used to make unit testing easier.
 
 ## DRY (Don't Repeat Yourself)
-* Aynı kod veya mantık tekrarından kaçınılmıştır. Örneğin, veri dönüşümleri AutoMapper ile merkezi bir şekilde yönetilmiştir. Bu, kodun daha az hata ile daha hızlı geliştirilmesini sağlar.
+* Repetition of code or logic is avoided. For instance, data transformations are centrally managed using AutoMapper, making development faster and with fewer errors.
 
 ## KISS (Keep It Simple, Stupid)
-* Kodun olabildiğince basit ve anlaşılır tutulması sağlanmıştır. Karmaşık yapılar yerine, basit ve etkili çözümler tercih edilmiştir. Bu, bakım maliyetlerini azaltır ve yeni geliştiricilerin projeyi hızlıca anlamasına yardımcı olur.
+* The code is kept as simple and understandable as possible. Simple and effective solutions are preferred over complex structures. This reduces maintenance costs and helps new developers quickly understand the project.
 
 ## YAGNI (You Aren't Gonna Need It)
-* Gereksiz özellikler eklemekten kaçınılmıştır. Yalnızca projenin mevcut gereksinimlerini karşılamak için gerekli olan bileşenler eklenmiştir. Bu, geliştirme sürecini hızlandırır ve kod tabanını temiz tutar.  
+* Unnecessary features are avoided. Only components necessary to meet the current project requirements are included, speeding up development and keeping the codebase clean.  
